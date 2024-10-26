@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/grid.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <!-- DM sans font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -96,25 +97,81 @@
   <body>
     <!-- header  -->
     <header class="header header__sticky">
-      <!-- mail  -->
-      <div class="header__contact">
-        <div class="icon-mail">
-          <img src="./assets/img/header-mail.png" alt="" class="mail-img" />
+      <div class="container container__pc">
+        <div class="header__row">
+          <!-- mail  -->
+          <div class="header__contact">
+            <div class="icon-mail">
+              <img src="./assets/img/header-mail.png" alt="" class="mail-img" />
+            </div>
+            <p class="header__mail-address hide-on-mobile">
+              hi@arif.interactive
+            </p>
+          </div>
+          <!-- logo  -->
+          <div class="header__logo">
+            <img src="./assets/img/logo.png" alt="" class="logo-img" />
+          </div>
+          <!-- nav  -->
+          <ul class="header__nav hide-on-mobile">
+            <li class="header__nav-item"><a href="#!">Projects</a></li>
+            <li class="header__nav-item"><a href="#!">Journey</a></li>
+            <li class="header__nav-item"><a href="#!">Service</a></li>
+            <li class="header__nav-item"><a href="#!">Contact</a></li>
+          </ul>
+          <!-- bars-mobile  -->
+          <label for="check-bars" class="bars-mobile hide-on-pc">
+            <svg
+              width="17"
+              height="8"
+              viewBox="0 0 17 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 7H16"
+                stroke="#5D3BEE"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M1 1H16"
+                stroke="#5D3BEE"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </label>
         </div>
-        <p class="header__mail-address">hi@arif.interactive</p>
       </div>
-      <!-- logo  -->
-      <div class="header__logo">
-        <img src="./assets/img/logo.png" alt="" class="logo-img" />
-      </div>
-      <!-- nav  -->
-      <ul class="header__nav">
-        <li class="header__nav-item"><a href="#!">Projects</a></li>
-        <li class="header__nav-item"><a href="#!">Journey</a></li>
-        <li class="header__nav-item"><a href="#!">Service</a></li>
-        <li class="header__nav-item"><a href="#!">Contact</a></li>
-      </ul>
     </header>
+    <!-- mobile header  -->
+    <div class="mobile-header hide-on-pc">
+      <!-- check bars  -->
+      <input
+        type="checkbox"
+        name="check-bars"
+        id="check-bars"
+        class="check-bars"
+        hidden
+      />
+      <!-- menu-overlay  -->
+      <label for="check-bars" class="menu-overlay"></label>
+      <!-- menu-drawer  -->
+      <div class="menu-drawer">
+        <div class="menu-drawer__content">
+          <ul class="mobile__nav">
+            <li class="mobile__nav-item"><a href="#!">Projects</a></li>
+            <li class="mobile__nav-item"><a href="#!">Journey</a></li>
+            <li class="mobile__nav-item"><a href="#!">Service</a></li>
+            <li class="mobile__nav-item"><a href="#!">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <!-- main  -->
     <main>
       <!-- hero  -->
@@ -227,7 +284,7 @@
             non nisl tincidunt ut elementum turpis.
           </p>
           <div class="row">
-            <div class="col-xl-4">
+            <div class="col-xl-4 col-lg-6 col-12">
               <div class="special_item">
                 <div class="special__icon">
                   <img src="./assets/img/special-idea.svg" alt="" />
@@ -239,7 +296,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-xl-4">
+            <div class="col-xl-4 col-lg-6 col-12">
               <div class="special_item">
                 <div class="special__icon">
                   <img src="./assets/img/special-pencil.svg" alt="" />
@@ -251,7 +308,7 @@
                 </p>
               </div>
             </div>
-            <div class="col-xl-4">
+            <div class="col-xl-4 col-lg-6 col-12">
               <div class="special_item">
                 <div class="special__icon">
                   <img src="./assets/img/special-phone.svg" alt="" />
@@ -264,6 +321,12 @@
               </div>
             </div>
           </div>
+          <!-- dots  -->
+          <div class="specialite__dots hide-on-pc">
+            <div class="specialite__dot-item"></div>
+            <div class="specialite__dot-item active"></div>
+            <div class="specialite__dot-item"></div>
+          </div>
         </div>
       </section>
       <!-- project  -->
@@ -271,12 +334,12 @@
         <div class="container">
           <!-- row 1  -->
           <div class="row">
-            <div class="col-xl-6">
+            <div class="col-lg-6 col-12">
               <h2 class="title project__title">
                 Take a look at my recent projects
               </h2>
             </div>
-            <div class="col-xl-6">
+            <div class="col-xl-6 col-12">
               <p class="text project__desc">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                 urna, non nisl tincidunt ut elementum turpis.
@@ -285,7 +348,7 @@
           </div>
           <!-- row 2  -->
           <div class="row">
-            <div class="col-xl-6">
+            <div class="col-lg-6 col-12">
               <div class="project__item">
                 <div class="project__content">
                   <div class="project__info">
@@ -301,7 +364,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-lg-6 col-12">
               <div class="project__item">
                 <div class="project__content">
                   <div class="project__info">
@@ -317,7 +380,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-lg-6 col-12">
               <div class="project__item">
                 <div class="project__content">
                   <div class="project__info">
@@ -333,7 +396,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-6">
+            <div class="col-lg-6 col-12">
               <div class="project__item">
                 <div class="project__content">
                   <div class="project__info">
@@ -350,6 +413,8 @@
               </div>
             </div>
           </div>
+          <!-- button  -->
+          <button class="btn project__btn">All Projects</button>
         </div>
       </section>
       <!-- experience  -->
@@ -567,7 +632,7 @@
           </p>
           <p class="atmosphere__interaction">@interaction_arif</p>
           <div class="row">
-            <div class="col-xl-4">
+            <div class="col-xl-4 col-lg-6 col-12">
               <div class="atmosphere__item">
                 <img
                   src="./assets/img/atmosphere-img1.jpg"
@@ -576,7 +641,7 @@
                 />
               </div>
             </div>
-            <div class="col-xl-4">
+            <div class="col-xl-4 col-lg-6 col-12">
               <div class="atmosphere__item">
                 <img
                   src="./assets/img/atmosphere-img2.jpg"
@@ -585,7 +650,7 @@
                 />
               </div>
             </div>
-            <div class="col-xl-4">
+            <div class="col-xl-4 col-lg-6 col-12">
               <div class="atmosphere__item">
                 <img
                   src="./assets/img/atmosphere-img3.jpg"
@@ -594,6 +659,12 @@
                 />
               </div>
             </div>
+          </div>
+          <!-- dots  -->
+          <div class="atmosphere__dots hide-on-pc">
+            <div class="atmosphere__dot-item"></div>
+            <div class="atmosphere__dot-item active"></div>
+            <div class="atmosphere__dot-item"></div>
           </div>
         </div>
       </section>

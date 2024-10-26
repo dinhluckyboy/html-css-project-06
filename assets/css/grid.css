@@ -6,7 +6,7 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  --spacer-x: 20px;
+  --spacer-x: 0;
 }
 
 .row {
