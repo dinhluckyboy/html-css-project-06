@@ -16,6 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/dinhluckyboy/onlay@main/onlay.min.css"
+    />
     <!-- favicon  -->
     <link
       rel="apple-touch-icon"
@@ -230,7 +234,9 @@
                   urna, non nisl tincidunt ut elementum turpis.
                 </p>
                 <div class="hero__link">
-                  <button class="btn hero__btn">Book a Call</button>
+                  <button class="btn hero__btn" id="onlay__btn">
+                    Book a Call
+                  </button>
                   <a href="#!" class="hero__my-works">My Works</a>
                 </div>
                 <div class="hero__social">
@@ -761,5 +767,26 @@
         </div>
       </div>
     </footer>
+    <template id="modal-1">
+      <h2>Example</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad quod natus
+        voluptatem? Quia quaerat nemo officia possimus similique nostrum vitae,
+        excepturi laboriosam praesentium hic eligendi incidunt dolorem expedita
+        dolorum et dolores quisquam, nam, saepe quos eius accusantium.
+        Consequuntur, cupiditate? Consequuntur, beatae voluptas minus doloribus
+        unde eveniet ratione adipisci voluptates dicta?
+      </p>
+    </template>
+    <script src="https://cdn.jsdelivr.net/gh/dinhluckyboy/onlay@main/onlay.min.js"></script>
+    <script>
+      const onlayBtn = document.querySelector("#onlay__btn");
+      const modal = new Onlay({
+        templateId: "modal-1",
+      });
+      onlayBtn.onclick = () => {
+        modal.open();
+      };
+    </script>
   </body>
 </html>
